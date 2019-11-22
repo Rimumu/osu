@@ -192,7 +192,7 @@ namespace osu.Game.Tournament.Components
                 },
                 new DiffPiece(
                     ("CS", $"{beatmap.BaseDifficulty.CircleSize:0.#}{hardRockExtra}"),
-                    ("AR", $"{ar:0.#}{srExtra}"),
+                    ("AR", $"{beatmap.BaseDifficulty.ApproachRate:0.#}{srExtra}"),
                     ("OD", $"{beatmap.BaseDifficulty.OverallDifficulty:0.#}{hardRockExtra}"),
                     ("HP", $"{beatmap.BaseDifficulty.DrainRate:0.#}{hardRockExtra}")
                 )
