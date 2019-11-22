@@ -163,7 +163,7 @@ namespace osu.Game.Tournament.Components
             string hardRockExtra = "";
             string srExtra = "";
 
-            //var ar = beatmap.BaseDifficulty.ApproachRate;
+            var ar = beatmap.BaseDifficulty.ApproachRate;
             if ((mods & LegacyMods.HardRock) > 0)
             {
                 hardRockExtra = "*";
@@ -172,7 +172,7 @@ namespace osu.Game.Tournament.Components
 
             if ((mods & LegacyMods.DoubleTime) > 0)
             {
-                //ar *= 1.5f;
+                ar *= 1.5f;
                 bpm *= 1.5f;
                 length /= 1.5f;
                 srExtra = "*";
@@ -192,7 +192,7 @@ namespace osu.Game.Tournament.Components
                 },
                 new DiffPiece(
                     ("CS", $"{beatmap.BaseDifficulty.CircleSize:0.#}{hardRockExtra}"),
-                    ("AR", $"{beatmap.BaseDifficulty.ApproachRate:0.#}{srExtra}"),
+                    ("AR", $"{ar:0.#}{srExtra}"),
                     ("OD", $"{beatmap.BaseDifficulty.OverallDifficulty:0.#}{hardRockExtra}"),
                     ("HP", $"{beatmap.BaseDifficulty.DrainRate:0.#}{hardRockExtra}")
                 )
