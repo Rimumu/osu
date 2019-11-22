@@ -191,8 +191,8 @@ namespace osu.Game.Tournament.Components
                     Origin = Anchor.TopLeft
                 },
                 new DiffPiece(
-                    //("CS", $"{beatmap.BaseDifficulty.CircleSize:0.#}{hardRockExtra}"),
-                    //("AR", $"{ar:0.#}{srExtra}"),
+                    ("CS", $"{beatmap.BaseDifficulty.CircleSize:0.#}{hardRockExtra}"),
+                    ("AR", $"{ar:0.#}{srExtra}"),
                     ("OD", $"{beatmap.BaseDifficulty.OverallDifficulty:0.#}{hardRockExtra}"),
                     ("HP", $"{beatmap.BaseDifficulty.DrainRate:0.#}{hardRockExtra}")
                 )
